@@ -5,7 +5,7 @@
 import gym
 from stable_baselines3 import A2C
 
-env = gym.make('LunarLander-v2', render_mode="human")  # continuous: LunarLanderContinuous-v2
+env = gym.make('LunarLander-v2')  # continuous: LunarLanderContinuous-v2
 env.reset()
 
 model = A2C('MlpPolicy', env, verbose=1)

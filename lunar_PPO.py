@@ -7,7 +7,7 @@ env.reset()
 model = PPO('MlpPolicy', env, verbose=1)
 model.learn(total_timesteps=100000)
 
-episodes = 5
+episodes = 1
 
 for ep in range(episodes):
 	obs = env.reset()
@@ -17,3 +17,6 @@ for ep in range(episodes):
 		obs, rewards, done, info = env.step(action)
 		env.render()
 		print(rewards)
+		print(ep)
+
+print('pause')
